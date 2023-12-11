@@ -4,10 +4,10 @@
     {
         public static void Main(string[] args)
         {
-            const string msg = "Que area quieres calcular" +
-                "triangulo" +
-                "cuadrado" +
-                "circulo";
+            const string msg = "Que area quieres calcular \n" +
+                "triangulo \n" +
+                "cuadrado \n" +
+                "circulo \n";
 
             Console.WriteLine(msg);
             string respu = Console.ReadLine();
@@ -23,7 +23,9 @@
             const string lado = "introduce uno de los lado";
             const string radio = "introduce el radio";
 
-            int BaseNum, alturaNum;
+            const string apotema = "introduce la apotema del pentagono";
+
+            int BaseNum, alturaNum, apotemaNum;
             double radioNum;
             int LadoOne, LadoTwo;
             double pi = 3.14159265359;
@@ -59,7 +61,13 @@
                     resultado = (int)(pi * Math.Sqrt(radioNum));
 
                     break;
+                case "pentagono":
+                    Console.WriteLine(apotema);
 
+                    LadoOne = Convert.ToInt32(Console.ReadLine());
+                    apotemaNum = Convert.ToInt32(Console.ReadLine());
+                    resultado = (5 * (LadoOne*5) *apotemaNum ) / 2 ; 
+                    break;
             }
             return resultado;
         }
